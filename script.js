@@ -1,17 +1,25 @@
  
 function bgs(){
+	// var array = new Array(1,2,3)
+	// var random = Math.floor(Math.random() * 3);
 
-	var array = new Array(1,2,3)
-	var random = Math.floor(Math.random() * 3);
+	// if (random == 1) {
+	// 	bg1();
+	// } else if(random == 2){
+	// 	bg2();
+	// } else {
+	// 	bg3();
+	// }
 
-	if (random == 1) {
-		bg1();
-	} else if(random == 2){
-		bg2();
-	} else {
-		bg3();
-	}
+	var bg = document.getElementById("hidden").innerHTML;
 
+	if (bg == "1") {
+			bg1();
+		} else if(bg == "2"){
+			bg3();
+		} else if(bg == "3"){
+			bg2();
+		}
 }
 
 function bg1(){
@@ -43,6 +51,9 @@ function bg1(){
 	  }, function(){
 	  $(this).css("background-color", "transparent");
 	});
+
+
+	var hidden = document.getElementById("hidden").innerHTML = "2"; 
 
 }
 
@@ -76,6 +87,8 @@ function bg2(){
 	$("#content").css("transition-duration", "1s");
 	$("#content").css("left", "8%");
 
+
+	var hidden = document.getElementById("hidden").innerHTML = "1"; 
 }
 
 function bg3(){
@@ -108,6 +121,9 @@ function bg3(){
 	  $(this).css("background-color", "transparent");
 	});
 
+
+	var hidden = document.getElementById("hidden").innerHTML = "3"; 
+	
 }
 
 

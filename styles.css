@@ -202,5 +202,9 @@ h1{
 	animation-delay: 7s;
 }
 
+/********HIDDEN******/
 
-
+#hidden {
+	position: absolute;
+	opacity: 0;
+}
